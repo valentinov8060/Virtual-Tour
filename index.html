@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Tour</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script>
+    AFRAME.registerComponent('set-image', {
+      schema: {
+        on: {type: 'string'},
+        target: {type: 'selector'},
+        src: {type: 'string'}
+      },
+      init: function () {
+        var data = this.data;
+        var el = this.el;
+        el.addEventListener(data.on, function () {
+          data.target.setAttribute('src', data.src);
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <a-scene>
+    <a-sky id="sky" src="assets/Street View 360 1.jpg" rotation="0 -130 0"></a-sky>
+
+    <!-- Camera rig with cursor -->
+    <a-entity camera look-controls>
+      <a-cursor></a-cursor>
+    </a-entity>
+
+    <!-- Titik Navigasi -->
+    <a-text value="Arahkan ke bola untuk berpindah lokasi" position="-1 1.5 -3" rotation="0 0 0"></a-text>
+
+    <!-- Titik 1 -->
+    <a-sphere position="-10 1.25 -4" radius="1.25" color="#EF2D5E"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 1.jpg"></a-sphere>
+
+    <!-- Titik 2 -->
+    <a-sphere position="-8 1.25 -6" radius="1.25" color="#4CC3D9"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 2.jpg"></a-sphere>
+
+    <!-- Titik 3 -->
+    <a-sphere position="-6 1.25 -8" radius="1.25" color="#FFC65D"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 3.jpg"></a-sphere>
+
+    <!-- Titik 4 -->
+    <a-sphere position="-4 1.25 -10" radius="1.25" color="#7BC8A4"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 4.jpg"></a-sphere>
+
+    <!-- Titik 5 -->
+    <a-sphere position="-1 1.25 -12" radius="1.25" color="#F16745"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 5.jpg"></a-sphere>
+
+    <!-- Titik 6 -->
+    <a-sphere position="2 1.25 -15" radius="1.25" color="#93648D"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 6.jpg"></a-sphere>
+
+    <!-- Titik 7 -->
+    <a-sphere position="5 1.25 -15" radius="1.25" color="#C06C84"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 7.jpg"></a-sphere>
+
+    <!-- Titik 8 -->
+    <a-sphere position="8 1.25 -15" radius="1.25" color="#6A0572"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 8.jpg"></a-sphere>
+
+    <!-- Titik 9 -->
+    <a-sphere position="11 1.25 -15" radius="1.25" color="#1B998B"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 9.jpg"></a-sphere>
+
+    <!-- Titik 10 -->
+    <a-sphere position="15 1.25 -15" radius="1.25" color="#ED254E"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 10.jpg"></a-sphere>
+
+    <!-- Titik 11 -->
+    <a-sphere position="13 1.25 -13" radius="1.25" color="#011627"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 11.jpg"></a-sphere>
+
+    <!-- Titik 12 -->
+    <a-sphere position="15 1.25 -11" radius="1.25" color="#2EC4B6"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 12.jpg"></a-sphere>
+
+    <!-- Titik 13 -->
+    <a-sphere position="14 1.75 8" radius="1.25" color="#E71D36"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 13.jpg"></a-sphere>
+
+    <!-- Titik 14 -->
+    <a-sphere position="15 2 3" radius="1.25" color="#FF9F1C"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 14.jpg"></a-sphere>
+
+    <!-- Titik 15 -->
+    <a-sphere position="16 6 -7" radius="1.25" color="#235789"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 15.jpg"></a-sphere>
+
+    <!-- Titik 16 -->
+    <a-sphere position="17 2.25 6" radius="1.25" color="#F1D302"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 16.jpg"></a-sphere>
+
+    <!-- Titik 17 -->
+    <a-sphere position="18 3 0" radius="1.25" color="#D90368"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 17.jpg"></a-sphere>
+
+    <!-- Titik 18 -->
+    <a-sphere position="19 2 -8" radius="1.25" color="#49759C"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 18.jpg"></a-sphere>
+
+    <!-- Titik 19 -->
+    <a-sphere position="20 5x -5" radius="1.25" color="#8D0801"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 19.jpg"></a-sphere>
+
+    <!-- Titik 20 -->
+    <a-sphere position="10 6 10" radius="1.25" color="#FF6347"
+              set-image="on: mouseenter; target: #sky; src: assets/Street View 360 20.jpg"></a-sphere>
+  </a-scene>
+</body>
+</html>
